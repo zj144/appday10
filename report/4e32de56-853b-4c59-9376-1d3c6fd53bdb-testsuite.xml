@@ -1,0 +1,648 @@
+<ns0:test-suite xmlns:ns0="urn:model.allure.qatools.yandex.ru" start="1577362437587" stop="1577362712353">
+  <name>09_tsst</name>
+  <labels/>
+  <test-cases>
+    <test-case start="1577362437587" status="passed" stop="1577362489377">
+      <name>TestLogin.test_login[13383161571-ykx19980709-None-songxiao]</name>
+      <attachments/>
+      <labels>
+        <label name="severity" value="normal"/>
+        <label name="thread" value="28568-MainThread"/>
+        <label name="host" value="DESKTOP-GPDHGES"/>
+        <label name="framework" value="pytest"/>
+        <label name="language" value="cpython3"/>
+      </labels>
+      <steps/>
+    </test-case>
+    <test-case start="1577362489404" status="passed" stop="1577362526599">
+      <name>TestLogin.test_login[ 13383161571-ykx19980709-None-songxiao]</name>
+      <attachments/>
+      <labels>
+        <label name="severity" value="normal"/>
+        <label name="thread" value="28568-MainThread"/>
+        <label name="host" value="DESKTOP-GPDHGES"/>
+        <label name="framework" value="pytest"/>
+        <label name="language" value="cpython3"/>
+      </labels>
+      <steps/>
+    </test-case>
+    <test-case start="1577362526616" status="passed" stop="1577362563106">
+      <name>TestLogin.test_login[13383161571 -ykx19980709-None-songxiao]</name>
+      <attachments/>
+      <labels>
+        <label name="severity" value="normal"/>
+        <label name="thread" value="28568-MainThread"/>
+        <label name="host" value="DESKTOP-GPDHGES"/>
+        <label name="framework" value="pytest"/>
+        <label name="language" value="cpython3"/>
+      </labels>
+      <steps/>
+    </test-case>
+    <test-case start="1577362563125" status="failed" stop="1577362587957">
+      <name>TestLogin.test_login[13488834010-159357-\u9519\u8bef-\u8d26\u53f7\u6216\u5bc6\u7801\u9519\u8bef]</name>
+      <failure>
+        <message>AttributeError: 'SettingPage' object has no attribute 'get_s'</message>
+        <stack-trace>self = &lt;09_tsst.TestLogin object at 0x0000017FF5056688&gt;, a = '13488834010', b = '159357', c = '错误'
+d = '账号或密码错误'
+
+    @pytest.mark.parametrize('a,b,c,d',GetData().get_yml_data('login.yml'))
+    def test_login(self,a,b,c,d):        # 点击登录
+        if c is None:
+            self.page.get_person_page().click_login1()  # 输入账号密码
+            self.page.get_login_page().login(a,b)  # 点击登录
+            self.page.get_login_page().click_btn() # 点击确认登录
+            self.page.get_login_page().click_suc_btn() # 获取用户名文本断言
+            data = self.page.get_person_page().get_username()
+            assert d in data
+            self.page.get_person_page().xiahua() # 下滑
+            self.page.get_person_page().click_setting_btn() # 点击设置
+            self.page.get_seting_page().logout() # 点击退出当前账号
+            self.page.get_person_page().sahnghua()# 上话到初始化界面
+    # 逆向用例
+    # @pytest.mark.parametrize('a,b','c', [("13383161571", "ykx199","错误")])
+    # def test_login2(self,a,b,c):        # 点击登录
+    #     self.page.get_person_page().click_login1()  # 输入账号密码
+    #     self.page.get_login_page().login(a,b)  # 点击登录
+    #     self.page.get_login_page().click_btn() # 点击确认登录
+    #     try:
+    #         self.page.get_login_page().get_toast(c)
+    #         assert True
+    #     except:
+    #         assert False
+    
+        else:
+            self.page.get_person_page().click_login1()  # 输入账号密码
+            self.page.get_login_page().login(a,b)  # 点击登录
+            self.page.get_login_page().click_btn() # 点击确认登录
+    
+            s6 = self.page.get_login_page().get_toast(d)
+    
+            try:
+&gt;               assert s6 == d
+E               AssertionError: assert '' == '账号或密码错误'
+E                 + 账号或密码错误
+
+scripts\09_tsst.py:61: AssertionError
+
+During handling of the above exception, another exception occurred:
+
+self = &lt;09_tsst.TestLogin object at 0x0000017FF5056688&gt;, a = '13488834010', b = '159357', c = '错误'
+d = '账号或密码错误'
+
+    @pytest.mark.parametrize('a,b,c,d',GetData().get_yml_data('login.yml'))
+    def test_login(self,a,b,c,d):        # 点击登录
+        if c is None:
+            self.page.get_person_page().click_login1()  # 输入账号密码
+            self.page.get_login_page().login(a,b)  # 点击登录
+            self.page.get_login_page().click_btn() # 点击确认登录
+            self.page.get_login_page().click_suc_btn() # 获取用户名文本断言
+            data = self.page.get_person_page().get_username()
+            assert d in data
+            self.page.get_person_page().xiahua() # 下滑
+            self.page.get_person_page().click_setting_btn() # 点击设置
+            self.page.get_seting_page().logout() # 点击退出当前账号
+            self.page.get_person_page().sahnghua()# 上话到初始化界面
+    # 逆向用例
+    # @pytest.mark.parametrize('a,b','c', [("13383161571", "ykx199","错误")])
+    # def test_login2(self,a,b,c):        # 点击登录
+    #     self.page.get_person_page().click_login1()  # 输入账号密码
+    #     self.page.get_login_page().login(a,b)  # 点击登录
+    #     self.page.get_login_page().click_btn() # 点击确认登录
+    #     try:
+    #         self.page.get_login_page().get_toast(c)
+    #         assert True
+    #     except:
+    #         assert False
+    
+        else:
+            self.page.get_person_page().click_login1()  # 输入账号密码
+            self.page.get_login_page().login(a,b)  # 点击登录
+            self.page.get_login_page().click_btn() # 点击确认登录
+    
+            s6 = self.page.get_login_page().get_toast(d)
+    
+            try:
+                assert s6 == d
+            except AssertionError:
+&gt;               self.page.get_seting_page().get_s.creen()
+E               AttributeError: 'SettingPage' object has no attribute 'get_s'
+
+scripts\09_tsst.py:63: AttributeError</stack-trace>
+      </failure>
+      <attachments/>
+      <labels>
+        <label name="severity" value="normal"/>
+        <label name="thread" value="28568-MainThread"/>
+        <label name="host" value="DESKTOP-GPDHGES"/>
+        <label name="framework" value="pytest"/>
+        <label name="language" value="cpython3"/>
+      </labels>
+      <steps/>
+    </test-case>
+    <test-case start="1577362587958" status="failed" stop="1577362617212">
+      <name>TestLogin.test_login[1348883401-159357-\u8fd8\u672a\u6ce8\u518c-\u8d26\u53f7\u8fd8\u672a\u6ce8\u518c\uff0c\u8bf7\u60a8\u5148\u8fdb\u884c\u6ce8\u518c]</name>
+      <failure>
+        <message>AttributeError: 'SettingPage' object has no attribute 'get_s'</message>
+        <stack-trace>self = &lt;09_tsst.TestLogin object at 0x0000017FF502CC08&gt;, a = '1348883401', b = '159357', c = '还未注册'
+d = '账号还未注册，请您先进行注册'
+
+    @pytest.mark.parametrize('a,b,c,d',GetData().get_yml_data('login.yml'))
+    def test_login(self,a,b,c,d):        # 点击登录
+        if c is None:
+            self.page.get_person_page().click_login1()  # 输入账号密码
+            self.page.get_login_page().login(a,b)  # 点击登录
+            self.page.get_login_page().click_btn() # 点击确认登录
+            self.page.get_login_page().click_suc_btn() # 获取用户名文本断言
+            data = self.page.get_person_page().get_username()
+            assert d in data
+            self.page.get_person_page().xiahua() # 下滑
+            self.page.get_person_page().click_setting_btn() # 点击设置
+            self.page.get_seting_page().logout() # 点击退出当前账号
+            self.page.get_person_page().sahnghua()# 上话到初始化界面
+    # 逆向用例
+    # @pytest.mark.parametrize('a,b','c', [("13383161571", "ykx199","错误")])
+    # def test_login2(self,a,b,c):        # 点击登录
+    #     self.page.get_person_page().click_login1()  # 输入账号密码
+    #     self.page.get_login_page().login(a,b)  # 点击登录
+    #     self.page.get_login_page().click_btn() # 点击确认登录
+    #     try:
+    #         self.page.get_login_page().get_toast(c)
+    #         assert True
+    #     except:
+    #         assert False
+    
+        else:
+            self.page.get_person_page().click_login1()  # 输入账号密码
+            self.page.get_login_page().login(a,b)  # 点击登录
+            self.page.get_login_page().click_btn() # 点击确认登录
+    
+            s6 = self.page.get_login_page().get_toast(d)
+    
+            try:
+&gt;               assert s6 == d
+E               AssertionError: assert '' == '账号还未注册，请您先进行注册'
+E                 + 账号还未注册，请您先进行注册
+
+scripts\09_tsst.py:61: AssertionError
+
+During handling of the above exception, another exception occurred:
+
+self = &lt;09_tsst.TestLogin object at 0x0000017FF502CC08&gt;, a = '1348883401', b = '159357', c = '还未注册'
+d = '账号还未注册，请您先进行注册'
+
+    @pytest.mark.parametrize('a,b,c,d',GetData().get_yml_data('login.yml'))
+    def test_login(self,a,b,c,d):        # 点击登录
+        if c is None:
+            self.page.get_person_page().click_login1()  # 输入账号密码
+            self.page.get_login_page().login(a,b)  # 点击登录
+            self.page.get_login_page().click_btn() # 点击确认登录
+            self.page.get_login_page().click_suc_btn() # 获取用户名文本断言
+            data = self.page.get_person_page().get_username()
+            assert d in data
+            self.page.get_person_page().xiahua() # 下滑
+            self.page.get_person_page().click_setting_btn() # 点击设置
+            self.page.get_seting_page().logout() # 点击退出当前账号
+            self.page.get_person_page().sahnghua()# 上话到初始化界面
+    # 逆向用例
+    # @pytest.mark.parametrize('a,b','c', [("13383161571", "ykx199","错误")])
+    # def test_login2(self,a,b,c):        # 点击登录
+    #     self.page.get_person_page().click_login1()  # 输入账号密码
+    #     self.page.get_login_page().login(a,b)  # 点击登录
+    #     self.page.get_login_page().click_btn() # 点击确认登录
+    #     try:
+    #         self.page.get_login_page().get_toast(c)
+    #         assert True
+    #     except:
+    #         assert False
+    
+        else:
+            self.page.get_person_page().click_login1()  # 输入账号密码
+            self.page.get_login_page().login(a,b)  # 点击登录
+            self.page.get_login_page().click_btn() # 点击确认登录
+    
+            s6 = self.page.get_login_page().get_toast(d)
+    
+            try:
+                assert s6 == d
+            except AssertionError:
+&gt;               self.page.get_seting_page().get_s.creen()
+E               AttributeError: 'SettingPage' object has no attribute 'get_s'
+
+scripts\09_tsst.py:63: AttributeError</stack-trace>
+      </failure>
+      <attachments/>
+      <labels>
+        <label name="severity" value="normal"/>
+        <label name="thread" value="28568-MainThread"/>
+        <label name="host" value="DESKTOP-GPDHGES"/>
+        <label name="framework" value="pytest"/>
+        <label name="language" value="cpython3"/>
+      </labels>
+      <steps/>
+    </test-case>
+    <test-case start="1577362617281" status="failed" stop="1577362642251">
+      <name>TestLogin.test_login[134888340111-159357-\u8fd8\u672a\u6ce8\u518c-\u8d26\u53f7\u8fd8\u672a\u6ce8\u518c\uff0c\u8bf7\u60a8\u5148\u8fdb\u884c\u6ce8\u518c]</name>
+      <failure>
+        <message>AttributeError: 'SettingPage' object has no attribute 'get_s'</message>
+        <stack-trace>self = &lt;09_tsst.TestLogin object at 0x0000017FF5092608&gt;, a = '134888340111', b = '159357', c = '还未注册'
+d = '账号还未注册，请您先进行注册'
+
+    @pytest.mark.parametrize('a,b,c,d',GetData().get_yml_data('login.yml'))
+    def test_login(self,a,b,c,d):        # 点击登录
+        if c is None:
+            self.page.get_person_page().click_login1()  # 输入账号密码
+            self.page.get_login_page().login(a,b)  # 点击登录
+            self.page.get_login_page().click_btn() # 点击确认登录
+            self.page.get_login_page().click_suc_btn() # 获取用户名文本断言
+            data = self.page.get_person_page().get_username()
+            assert d in data
+            self.page.get_person_page().xiahua() # 下滑
+            self.page.get_person_page().click_setting_btn() # 点击设置
+            self.page.get_seting_page().logout() # 点击退出当前账号
+            self.page.get_person_page().sahnghua()# 上话到初始化界面
+    # 逆向用例
+    # @pytest.mark.parametrize('a,b','c', [("13383161571", "ykx199","错误")])
+    # def test_login2(self,a,b,c):        # 点击登录
+    #     self.page.get_person_page().click_login1()  # 输入账号密码
+    #     self.page.get_login_page().login(a,b)  # 点击登录
+    #     self.page.get_login_page().click_btn() # 点击确认登录
+    #     try:
+    #         self.page.get_login_page().get_toast(c)
+    #         assert True
+    #     except:
+    #         assert False
+    
+        else:
+            self.page.get_person_page().click_login1()  # 输入账号密码
+            self.page.get_login_page().login(a,b)  # 点击登录
+            self.page.get_login_page().click_btn() # 点击确认登录
+    
+            s6 = self.page.get_login_page().get_toast(d)
+    
+            try:
+&gt;               assert s6 == d
+E               AssertionError: assert '' == '账号还未注册，请您先进行注册'
+E                 + 账号还未注册，请您先进行注册
+
+scripts\09_tsst.py:61: AssertionError
+
+During handling of the above exception, another exception occurred:
+
+self = &lt;09_tsst.TestLogin object at 0x0000017FF5092608&gt;, a = '134888340111', b = '159357', c = '还未注册'
+d = '账号还未注册，请您先进行注册'
+
+    @pytest.mark.parametrize('a,b,c,d',GetData().get_yml_data('login.yml'))
+    def test_login(self,a,b,c,d):        # 点击登录
+        if c is None:
+            self.page.get_person_page().click_login1()  # 输入账号密码
+            self.page.get_login_page().login(a,b)  # 点击登录
+            self.page.get_login_page().click_btn() # 点击确认登录
+            self.page.get_login_page().click_suc_btn() # 获取用户名文本断言
+            data = self.page.get_person_page().get_username()
+            assert d in data
+            self.page.get_person_page().xiahua() # 下滑
+            self.page.get_person_page().click_setting_btn() # 点击设置
+            self.page.get_seting_page().logout() # 点击退出当前账号
+            self.page.get_person_page().sahnghua()# 上话到初始化界面
+    # 逆向用例
+    # @pytest.mark.parametrize('a,b','c', [("13383161571", "ykx199","错误")])
+    # def test_login2(self,a,b,c):        # 点击登录
+    #     self.page.get_person_page().click_login1()  # 输入账号密码
+    #     self.page.get_login_page().login(a,b)  # 点击登录
+    #     self.page.get_login_page().click_btn() # 点击确认登录
+    #     try:
+    #         self.page.get_login_page().get_toast(c)
+    #         assert True
+    #     except:
+    #         assert False
+    
+        else:
+            self.page.get_person_page().click_login1()  # 输入账号密码
+            self.page.get_login_page().login(a,b)  # 点击登录
+            self.page.get_login_page().click_btn() # 点击确认登录
+    
+            s6 = self.page.get_login_page().get_toast(d)
+    
+            try:
+                assert s6 == d
+            except AssertionError:
+&gt;               self.page.get_seting_page().get_s.creen()
+E               AttributeError: 'SettingPage' object has no attribute 'get_s'
+
+scripts\09_tsst.py:63: AttributeError</stack-trace>
+      </failure>
+      <attachments/>
+      <labels>
+        <label name="severity" value="normal"/>
+        <label name="thread" value="28568-MainThread"/>
+        <label name="host" value="DESKTOP-GPDHGES"/>
+        <label name="framework" value="pytest"/>
+        <label name="language" value="cpython3"/>
+      </labels>
+      <steps/>
+    </test-case>
+    <test-case start="1577362642252" status="failed" stop="1577362665689">
+      <name>TestLogin.test_login[11488834011-159357-\u8fd8\u672a\u6ce8\u518c-\u8d26\u53f7\u8fd8\u672a\u6ce8\u518c\uff0c\u8bf7\u60a8\u5148\u8fdb\u884c\u6ce8\u518c]</name>
+      <failure>
+        <message>AttributeError: 'SettingPage' object has no attribute 'get_s'</message>
+        <stack-trace>self = &lt;09_tsst.TestLogin object at 0x0000017FF50B17C8&gt;, a = '11488834011', b = '159357', c = '还未注册'
+d = '账号还未注册，请您先进行注册'
+
+    @pytest.mark.parametrize('a,b,c,d',GetData().get_yml_data('login.yml'))
+    def test_login(self,a,b,c,d):        # 点击登录
+        if c is None:
+            self.page.get_person_page().click_login1()  # 输入账号密码
+            self.page.get_login_page().login(a,b)  # 点击登录
+            self.page.get_login_page().click_btn() # 点击确认登录
+            self.page.get_login_page().click_suc_btn() # 获取用户名文本断言
+            data = self.page.get_person_page().get_username()
+            assert d in data
+            self.page.get_person_page().xiahua() # 下滑
+            self.page.get_person_page().click_setting_btn() # 点击设置
+            self.page.get_seting_page().logout() # 点击退出当前账号
+            self.page.get_person_page().sahnghua()# 上话到初始化界面
+    # 逆向用例
+    # @pytest.mark.parametrize('a,b','c', [("13383161571", "ykx199","错误")])
+    # def test_login2(self,a,b,c):        # 点击登录
+    #     self.page.get_person_page().click_login1()  # 输入账号密码
+    #     self.page.get_login_page().login(a,b)  # 点击登录
+    #     self.page.get_login_page().click_btn() # 点击确认登录
+    #     try:
+    #         self.page.get_login_page().get_toast(c)
+    #         assert True
+    #     except:
+    #         assert False
+    
+        else:
+            self.page.get_person_page().click_login1()  # 输入账号密码
+            self.page.get_login_page().login(a,b)  # 点击登录
+            self.page.get_login_page().click_btn() # 点击确认登录
+    
+            s6 = self.page.get_login_page().get_toast(d)
+    
+            try:
+&gt;               assert s6 == d
+E               AssertionError: assert '' == '账号还未注册，请您先进行注册'
+E                 + 账号还未注册，请您先进行注册
+
+scripts\09_tsst.py:61: AssertionError
+
+During handling of the above exception, another exception occurred:
+
+self = &lt;09_tsst.TestLogin object at 0x0000017FF50B17C8&gt;, a = '11488834011', b = '159357', c = '还未注册'
+d = '账号还未注册，请您先进行注册'
+
+    @pytest.mark.parametrize('a,b,c,d',GetData().get_yml_data('login.yml'))
+    def test_login(self,a,b,c,d):        # 点击登录
+        if c is None:
+            self.page.get_person_page().click_login1()  # 输入账号密码
+            self.page.get_login_page().login(a,b)  # 点击登录
+            self.page.get_login_page().click_btn() # 点击确认登录
+            self.page.get_login_page().click_suc_btn() # 获取用户名文本断言
+            data = self.page.get_person_page().get_username()
+            assert d in data
+            self.page.get_person_page().xiahua() # 下滑
+            self.page.get_person_page().click_setting_btn() # 点击设置
+            self.page.get_seting_page().logout() # 点击退出当前账号
+            self.page.get_person_page().sahnghua()# 上话到初始化界面
+    # 逆向用例
+    # @pytest.mark.parametrize('a,b','c', [("13383161571", "ykx199","错误")])
+    # def test_login2(self,a,b,c):        # 点击登录
+    #     self.page.get_person_page().click_login1()  # 输入账号密码
+    #     self.page.get_login_page().login(a,b)  # 点击登录
+    #     self.page.get_login_page().click_btn() # 点击确认登录
+    #     try:
+    #         self.page.get_login_page().get_toast(c)
+    #         assert True
+    #     except:
+    #         assert False
+    
+        else:
+            self.page.get_person_page().click_login1()  # 输入账号密码
+            self.page.get_login_page().login(a,b)  # 点击登录
+            self.page.get_login_page().click_btn() # 点击确认登录
+    
+            s6 = self.page.get_login_page().get_toast(d)
+    
+            try:
+                assert s6 == d
+            except AssertionError:
+&gt;               self.page.get_seting_page().get_s.creen()
+E               AttributeError: 'SettingPage' object has no attribute 'get_s'
+
+scripts\09_tsst.py:63: AttributeError</stack-trace>
+      </failure>
+      <attachments/>
+      <labels>
+        <label name="severity" value="normal"/>
+        <label name="thread" value="28568-MainThread"/>
+        <label name="host" value="DESKTOP-GPDHGES"/>
+        <label name="framework" value="pytest"/>
+        <label name="language" value="cpython3"/>
+      </labels>
+      <steps/>
+    </test-case>
+    <test-case start="1577362665690" status="failed" stop="1577362688846">
+      <name>TestLogin.test_login[hello#-159357-\u8fd8\u672a\u6ce8\u518c-\u8d26\u53f7\u8fd8\u672a\u6ce8\u518c\uff0c\u8bf7\u60a8\u5148\u8fdb\u884c\u6ce8\u518c]</name>
+      <failure>
+        <message>AttributeError: 'SettingPage' object has no attribute 'get_s'</message>
+        <stack-trace>self = &lt;09_tsst.TestLogin object at 0x0000017FF5073E08&gt;, a = 'hello#', b = '159357', c = '还未注册'
+d = '账号还未注册，请您先进行注册'
+
+    @pytest.mark.parametrize('a,b,c,d',GetData().get_yml_data('login.yml'))
+    def test_login(self,a,b,c,d):        # 点击登录
+        if c is None:
+            self.page.get_person_page().click_login1()  # 输入账号密码
+            self.page.get_login_page().login(a,b)  # 点击登录
+            self.page.get_login_page().click_btn() # 点击确认登录
+            self.page.get_login_page().click_suc_btn() # 获取用户名文本断言
+            data = self.page.get_person_page().get_username()
+            assert d in data
+            self.page.get_person_page().xiahua() # 下滑
+            self.page.get_person_page().click_setting_btn() # 点击设置
+            self.page.get_seting_page().logout() # 点击退出当前账号
+            self.page.get_person_page().sahnghua()# 上话到初始化界面
+    # 逆向用例
+    # @pytest.mark.parametrize('a,b','c', [("13383161571", "ykx199","错误")])
+    # def test_login2(self,a,b,c):        # 点击登录
+    #     self.page.get_person_page().click_login1()  # 输入账号密码
+    #     self.page.get_login_page().login(a,b)  # 点击登录
+    #     self.page.get_login_page().click_btn() # 点击确认登录
+    #     try:
+    #         self.page.get_login_page().get_toast(c)
+    #         assert True
+    #     except:
+    #         assert False
+    
+        else:
+            self.page.get_person_page().click_login1()  # 输入账号密码
+            self.page.get_login_page().login(a,b)  # 点击登录
+            self.page.get_login_page().click_btn() # 点击确认登录
+    
+            s6 = self.page.get_login_page().get_toast(d)
+    
+            try:
+&gt;               assert s6 == d
+E               AssertionError: assert '' == '账号还未注册，请您先进行注册'
+E                 + 账号还未注册，请您先进行注册
+
+scripts\09_tsst.py:61: AssertionError
+
+During handling of the above exception, another exception occurred:
+
+self = &lt;09_tsst.TestLogin object at 0x0000017FF5073E08&gt;, a = 'hello#', b = '159357', c = '还未注册'
+d = '账号还未注册，请您先进行注册'
+
+    @pytest.mark.parametrize('a,b,c,d',GetData().get_yml_data('login.yml'))
+    def test_login(self,a,b,c,d):        # 点击登录
+        if c is None:
+            self.page.get_person_page().click_login1()  # 输入账号密码
+            self.page.get_login_page().login(a,b)  # 点击登录
+            self.page.get_login_page().click_btn() # 点击确认登录
+            self.page.get_login_page().click_suc_btn() # 获取用户名文本断言
+            data = self.page.get_person_page().get_username()
+            assert d in data
+            self.page.get_person_page().xiahua() # 下滑
+            self.page.get_person_page().click_setting_btn() # 点击设置
+            self.page.get_seting_page().logout() # 点击退出当前账号
+            self.page.get_person_page().sahnghua()# 上话到初始化界面
+    # 逆向用例
+    # @pytest.mark.parametrize('a,b','c', [("13383161571", "ykx199","错误")])
+    # def test_login2(self,a,b,c):        # 点击登录
+    #     self.page.get_person_page().click_login1()  # 输入账号密码
+    #     self.page.get_login_page().login(a,b)  # 点击登录
+    #     self.page.get_login_page().click_btn() # 点击确认登录
+    #     try:
+    #         self.page.get_login_page().get_toast(c)
+    #         assert True
+    #     except:
+    #         assert False
+    
+        else:
+            self.page.get_person_page().click_login1()  # 输入账号密码
+            self.page.get_login_page().login(a,b)  # 点击登录
+            self.page.get_login_page().click_btn() # 点击确认登录
+    
+            s6 = self.page.get_login_page().get_toast(d)
+    
+            try:
+                assert s6 == d
+            except AssertionError:
+&gt;               self.page.get_seting_page().get_s.creen()
+E               AttributeError: 'SettingPage' object has no attribute 'get_s'
+
+scripts\09_tsst.py:63: AttributeError</stack-trace>
+      </failure>
+      <attachments/>
+      <labels>
+        <label name="severity" value="normal"/>
+        <label name="thread" value="28568-MainThread"/>
+        <label name="host" value="DESKTOP-GPDHGES"/>
+        <label name="framework" value="pytest"/>
+        <label name="language" value="cpython3"/>
+      </labels>
+      <steps/>
+    </test-case>
+    <test-case start="1577362688850" status="failed" stop="1577362712353">
+      <name>TestLogin.test_login[13333333333-159357-\u8fd8\u672a\u6ce8\u518c-\u8d26\u53f7\u8fd8\u6ce8\u518c\uff0c\u8bf7\u60a8\u5148\u8fdb\u884c\u6ce8\u518c]</name>
+      <failure>
+        <message>AttributeError: 'SettingPage' object has no attribute 'get_s'</message>
+        <stack-trace>self = &lt;09_tsst.TestLogin object at 0x0000017FF50CD288&gt;, a = '13333333333', b = '159357', c = '还未注册'
+d = '账号还注册，请您先进行注册'
+
+    @pytest.mark.parametrize('a,b,c,d',GetData().get_yml_data('login.yml'))
+    def test_login(self,a,b,c,d):        # 点击登录
+        if c is None:
+            self.page.get_person_page().click_login1()  # 输入账号密码
+            self.page.get_login_page().login(a,b)  # 点击登录
+            self.page.get_login_page().click_btn() # 点击确认登录
+            self.page.get_login_page().click_suc_btn() # 获取用户名文本断言
+            data = self.page.get_person_page().get_username()
+            assert d in data
+            self.page.get_person_page().xiahua() # 下滑
+            self.page.get_person_page().click_setting_btn() # 点击设置
+            self.page.get_seting_page().logout() # 点击退出当前账号
+            self.page.get_person_page().sahnghua()# 上话到初始化界面
+    # 逆向用例
+    # @pytest.mark.parametrize('a,b','c', [("13383161571", "ykx199","错误")])
+    # def test_login2(self,a,b,c):        # 点击登录
+    #     self.page.get_person_page().click_login1()  # 输入账号密码
+    #     self.page.get_login_page().login(a,b)  # 点击登录
+    #     self.page.get_login_page().click_btn() # 点击确认登录
+    #     try:
+    #         self.page.get_login_page().get_toast(c)
+    #         assert True
+    #     except:
+    #         assert False
+    
+        else:
+            self.page.get_person_page().click_login1()  # 输入账号密码
+            self.page.get_login_page().login(a,b)  # 点击登录
+            self.page.get_login_page().click_btn() # 点击确认登录
+    
+            s6 = self.page.get_login_page().get_toast(d)
+    
+            try:
+&gt;               assert s6 == d
+E               AssertionError: assert '' == '账号还注册，请您先进行注册'
+E                 + 账号还注册，请您先进行注册
+
+scripts\09_tsst.py:61: AssertionError
+
+During handling of the above exception, another exception occurred:
+
+self = &lt;09_tsst.TestLogin object at 0x0000017FF50CD288&gt;, a = '13333333333', b = '159357', c = '还未注册'
+d = '账号还注册，请您先进行注册'
+
+    @pytest.mark.parametrize('a,b,c,d',GetData().get_yml_data('login.yml'))
+    def test_login(self,a,b,c,d):        # 点击登录
+        if c is None:
+            self.page.get_person_page().click_login1()  # 输入账号密码
+            self.page.get_login_page().login(a,b)  # 点击登录
+            self.page.get_login_page().click_btn() # 点击确认登录
+            self.page.get_login_page().click_suc_btn() # 获取用户名文本断言
+            data = self.page.get_person_page().get_username()
+            assert d in data
+            self.page.get_person_page().xiahua() # 下滑
+            self.page.get_person_page().click_setting_btn() # 点击设置
+            self.page.get_seting_page().logout() # 点击退出当前账号
+            self.page.get_person_page().sahnghua()# 上话到初始化界面
+    # 逆向用例
+    # @pytest.mark.parametrize('a,b','c', [("13383161571", "ykx199","错误")])
+    # def test_login2(self,a,b,c):        # 点击登录
+    #     self.page.get_person_page().click_login1()  # 输入账号密码
+    #     self.page.get_login_page().login(a,b)  # 点击登录
+    #     self.page.get_login_page().click_btn() # 点击确认登录
+    #     try:
+    #         self.page.get_login_page().get_toast(c)
+    #         assert True
+    #     except:
+    #         assert False
+    
+        else:
+            self.page.get_person_page().click_login1()  # 输入账号密码
+            self.page.get_login_page().login(a,b)  # 点击登录
+            self.page.get_login_page().click_btn() # 点击确认登录
+    
+            s6 = self.page.get_login_page().get_toast(d)
+    
+            try:
+                assert s6 == d
+            except AssertionError:
+&gt;               self.page.get_seting_page().get_s.creen()
+E               AttributeError: 'SettingPage' object has no attribute 'get_s'
+
+scripts\09_tsst.py:63: AttributeError</stack-trace>
+      </failure>
+      <attachments/>
+      <labels>
+        <label name="severity" value="normal"/>
+        <label name="thread" value="28568-MainThread"/>
+        <label name="host" value="DESKTOP-GPDHGES"/>
+        <label name="framework" value="pytest"/>
+        <label name="language" value="cpython3"/>
+      </labels>
+      <steps/>
+    </test-case>
+  </test-cases>
+</ns0:test-suite>
