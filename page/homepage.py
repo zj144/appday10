@@ -19,3 +19,4 @@ class HomePage(Base):
         # 点击个人中心
     def click_my_btn(self):
         self.click_element(PageElements.home_my_btn_id)
+    

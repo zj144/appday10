@@ -54,17 +54,17 @@ class Base:
                               start_y=size.get('height') * 0.5,
                               end_x=size.get('width') * 0.8,
                               end_y=size.get('height') * 0.5, duration=2000)
-    def get_toast(self,text):
-        message_xpath = (By.XPATH, "//*[contains(@text,{})]".format(text))
+    def get_toast(self,cc):
+        message_xpath = (By.XPATH, "//*[contains(@text,{})]".format(cc))
         return self.find_ele(message_xpath,timeout=3,poll=0.3).text
 
     def get_screen(self,name="截图"):
-        class TestAdding:
-            def test_001(self):
-                # 将txt文件添加到allure文件
-
-                with open("./image" + os.sep + "abc.png", "rb") as f:
-                    allure.attach(name, f.read(), allure.attach_type.PNG)
+            # 图片名称
+            png_name = "{}.png".format(int(time.time()))
+            self.driver.get_screenshot_as_file("./image"+os.sep+png_name)
+            with open("./image" + os.sep + "abc.png", "rb") as f:
+                # 将图片添加到allure报告
+                allure.attach(name, f.read(), allure.attach_type.PNG)
 
 
 

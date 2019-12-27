@@ -1,0 +1,114 @@
+<ns0:test-suite xmlns:ns0="urn:model.allure.qatools.yandex.ru" start="1577431069934" stop="1577431337747">
+  <name>09_tsst</name>
+  <labels/>
+  <test-cases>
+    <test-case start="1577431069934" status="passed" stop="1577431119661">
+      <name>TestLogin.test_login[13383161571-ykx19980709-None-songxiao]</name>
+      <attachments/>
+      <labels>
+        <label name="severity" value="normal"/>
+        <label name="thread" value="12348-MainThread"/>
+        <label name="host" value="DESKTOP-GPDHGES"/>
+        <label name="framework" value="pytest"/>
+        <label name="language" value="cpython3"/>
+      </labels>
+      <steps/>
+    </test-case>
+    <test-case start="1577431119680" status="passed" stop="1577431157127">
+      <name>TestLogin.test_login[ 13383161571-ykx19980709-None-songxiao]</name>
+      <attachments/>
+      <labels>
+        <label name="severity" value="normal"/>
+        <label name="thread" value="12348-MainThread"/>
+        <label name="host" value="DESKTOP-GPDHGES"/>
+        <label name="framework" value="pytest"/>
+        <label name="language" value="cpython3"/>
+      </labels>
+      <steps/>
+    </test-case>
+    <test-case start="1577431157149" status="passed" stop="1577431193930">
+      <name>TestLogin.test_login[13383161571 -ykx19980709-None-songxiao]</name>
+      <attachments/>
+      <labels>
+        <label name="severity" value="normal"/>
+        <label name="thread" value="12348-MainThread"/>
+        <label name="host" value="DESKTOP-GPDHGES"/>
+        <label name="framework" value="pytest"/>
+        <label name="language" value="cpython3"/>
+      </labels>
+      <steps/>
+    </test-case>
+    <test-case start="1577431193950" status="passed" stop="1577431218595">
+      <name>TestLogin.test_login[13488834010-159357-\u9519\u8bef-\u8d26\u53f7\u6216\u5bc6\u7801\u9519\u8bef]</name>
+      <attachments/>
+      <labels>
+        <label name="severity" value="normal"/>
+        <label name="thread" value="12348-MainThread"/>
+        <label name="host" value="DESKTOP-GPDHGES"/>
+        <label name="framework" value="pytest"/>
+        <label name="language" value="cpython3"/>
+      </labels>
+      <steps/>
+    </test-case>
+    <test-case start="1577431218598" status="passed" stop="1577431243049">
+      <name>TestLogin.test_login[1348883401-159357-\u8fd8\u672a\u6ce8\u518c-\u8d26\u53f7\u8fd8\u672a\u6ce8\u518c\uff0c\u8bf7\u60a8\u5148\u8fdb\u884c\u6ce8\u518c]</name>
+      <attachments/>
+      <labels>
+        <label name="severity" value="normal"/>
+        <label name="thread" value="12348-MainThread"/>
+        <label name="host" value="DESKTOP-GPDHGES"/>
+        <label name="framework" value="pytest"/>
+        <label name="language" value="cpython3"/>
+      </labels>
+      <steps/>
+    </test-case>
+    <test-case start="1577431243051" status="passed" stop="1577431267847">
+      <name>TestLogin.test_login[134888340111-159357-\u8fd8\u672a\u6ce8\u518c-\u8d26\u53f7\u8fd8\u672a\u6ce8\u518c\uff0c\u8bf7\u60a8\u5148\u8fdb\u884c\u6ce8\u518c]</name>
+      <attachments/>
+      <labels>
+        <label name="severity" value="normal"/>
+        <label name="thread" value="12348-MainThread"/>
+        <label name="host" value="DESKTOP-GPDHGES"/>
+        <label name="framework" value="pytest"/>
+        <label name="language" value="cpython3"/>
+      </labels>
+      <steps/>
+    </test-case>
+    <test-case start="1577431267850" status="passed" stop="1577431291012">
+      <name>TestLogin.test_login[11488834011-159357-\u8fd8\u672a\u6ce8\u518c-\u8d26\u53f7\u8fd8\u672a\u6ce8\u518c\uff0c\u8bf7\u60a8\u5148\u8fdb\u884c\u6ce8\u518c]</name>
+      <attachments/>
+      <labels>
+        <label name="severity" value="normal"/>
+        <label name="thread" value="12348-MainThread"/>
+        <label name="host" value="DESKTOP-GPDHGES"/>
+        <label name="framework" value="pytest"/>
+        <label name="language" value="cpython3"/>
+      </labels>
+      <steps/>
+    </test-case>
+    <test-case start="1577431291015" status="passed" stop="1577431313784">
+      <name>TestLogin.test_login[hello#-159357-\u8fd8\u672a\u6ce8\u518c-\u8d26\u53f7\u8fd8\u672a\u6ce8\u518c\uff0c\u8bf7\u60a8\u5148\u8fdb\u884c\u6ce8\u518c]</name>
+      <attachments/>
+      <labels>
+        <label name="severity" value="normal"/>
+        <label name="thread" value="12348-MainThread"/>
+        <label name="host" value="DESKTOP-GPDHGES"/>
+        <label name="framework" value="pytest"/>
+        <label name="language" value="cpython3"/>
+      </labels>
+      <steps/>
+    </test-case>
+    <test-case start="1577431313786" status="passed" stop="1577431337747">
+      <name>TestLogin.test_login[13333333333-159357-\u8fd8\u672a\u6ce8\u518c-\u8d26\u53f7\u8fd8\u6ce8\u518c\uff0c\u8bf7\u60a8\u5148\u8fdb\u884c\u6ce8\u518c]</name>
+      <attachments/>
+      <labels>
+        <label name="severity" value="normal"/>
+        <label name="thread" value="12348-MainThread"/>
+        <label name="host" value="DESKTOP-GPDHGES"/>
+        <label name="framework" value="pytest"/>
+        <label name="language" value="cpython3"/>
+      </labels>
+      <steps/>
+    </test-case>
+  </test-cases>
+</ns0:test-suite>
